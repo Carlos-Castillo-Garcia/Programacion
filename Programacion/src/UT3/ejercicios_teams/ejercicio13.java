@@ -22,6 +22,7 @@ public class ejercicio13 {
 		nota = entrada.nextInt();
 		
 		if (nota >= 0 || nota <= 4) {
+			//se queda pillado aqui
 				System.out.println("INSUFICIENTE");
 			}else if (nota == 5){
 				System.out.println("SUFICIENTE");
