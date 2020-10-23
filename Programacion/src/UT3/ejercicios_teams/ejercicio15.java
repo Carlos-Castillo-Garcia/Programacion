@@ -76,8 +76,7 @@ public class ejercicio15 {
         //Cerrado del Scanner
         entrada.close();
         
-        //segundo comentario para hacer pruebas
-        //otra prueba
+
          
 
          
