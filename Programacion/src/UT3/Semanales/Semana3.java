@@ -19,8 +19,8 @@ public class Semana3 {
 		
 		int real;
 		int estimacion;
-		int metros_campo=7140;
-		int calculo;
+		int calculoenmetroscuadrados_largo;
+		int calculoenmetroscuadrados_ancho;
 		
 			do {	
 				System.out.print("Introduzca la estimacion en campos de futbol: ");
@@ -28,14 +28,6 @@ public class Semana3 {
 				
 				System.out.print("Introduzca la medida real en metros cuadrados: ");
 				real = entrada.nextInt();
-				
-				calculo = metros_campo*estimacion;
-				
-				if(real != calculo){
-					System.out.println("NO");
-				}else{
-					System.out.println("SI");
-				}
 				
 				
 			}while(real !=0);
