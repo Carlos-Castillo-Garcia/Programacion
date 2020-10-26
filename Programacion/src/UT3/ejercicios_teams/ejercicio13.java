@@ -16,25 +16,25 @@ public class ejercicio13 {
 		// TODO Auto-generated method stub
 		Scanner entrada = new Scanner(System.in);
 		
-		int nota;
+		float nota;
 		
 		System.out.println("Introduzca su nota: ");
 		nota = entrada.nextInt();
 		
-		if(nota >= 0 || nota <= 4) {
+		if(nota >= 0 && nota <= 4) {
 			//se queda pillado aqui
 				System.out.println("INSUFICIENTE");
-			}if (nota == 5){
+			}else if (nota == 5 && nota <= 6){
 					System.out.println("SUFICIENTE");
-				}else if (nota == 6){
+				}else if (nota == 6 && nota <= 7){
 						System.out.println("BIEN");
 					}else if (nota == 7 || nota == 8) {
 							System.out.println("NOTABLE");
 						}else if (nota == 9 || nota == 10) {
 								System.out.println("SOBRESALIENTE");
-			}else {
-				System.out.println("Error");
-			}
+						}else {
+							System.out.println("Error");
+						}
 		entrada.close();
 
 	}
