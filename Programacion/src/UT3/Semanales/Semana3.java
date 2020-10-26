@@ -15,23 +15,33 @@ public class Semana3 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner entrada =new Scanner(System.in);
-		Scanner entrada2 =new Scanner(System.in);
 		
 		int real;
 		int estimacion;
-		int calculoenmetroscuadrados_largo;
-		int calculoenmetroscuadrados_ancho;
+		int minimo;
+		int maximo;
+		int division;
 		
-			do {	
-				System.out.print("Introduzca la estimacion en campos de futbol: ");
-				estimacion = entrada2.nextInt();
-				
+		minimo = 90 * 45;
+		maximo = 120 * 90;
+		
+		
+			do {
 				System.out.print("Introduzca la medida real en metros cuadrados: ");
 				real = entrada.nextInt();
 				
+				System.out.print("Introduzca la estimacion en campos de futbol: ");
+				estimacion = entrada.nextInt();
+				
+				division=real/estimacion;
+				
+				if(division >= minimo && division <= maximo ) {
+					System.out.println("SI, la estimacion es correcta");
+				}else {
+					System.out.println("NO, la estimacion no es correcta");
+				}
 				
 			}while(real !=0);
-			entrada2.close();
 			entrada.close();
 	}
 
