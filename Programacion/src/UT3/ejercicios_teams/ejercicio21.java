@@ -11,6 +11,7 @@ import java.util.Scanner;
  */
 public class ejercicio21 {
 
+
 	/**
 	 * @param args
 	 */
@@ -24,15 +25,14 @@ public class ejercicio21 {
 		int total_suma = 0;
 		int mayor = 0;
 		int menor = 0;
-		int contador = -1;
+		int contador = 0;
 		int media;
 
 
 		System.out.println("Para parar este programa de suma tiene que poner un 0");
 
-		do{
-			
-			contador = contador + 1;
+		do{		
+						
 			
 			System.out.print("Introduzca un numero: ");
 			numero_usuario = entrada.nextInt();
@@ -40,24 +40,27 @@ public class ejercicio21 {
 			suma_de_numeros = aux + total_suma;
 			total_suma = suma_de_numeros;
 			
-			if(numero_usuario > mayor){
-				mayor = numero_usuario;
+			if(numero_usuario == 0) {
 				
 			}else {
-				
-			}
-			
-			if(menor == 0) {
-				menor = numero_usuario;
+				contador = contador + 1;
 
-			}else {
-				
-				if(numero_usuario < menor){
-					menor = numero_usuario;
-
-				}
+		          if(contador == 1) {
+					  mayor = numero_usuario;
+		          }else {
+		        	  if(numero_usuario > mayor){
+							mayor = numero_usuario;
+						}
+		          }
+		          
+		          if(contador == 1) {
+					  menor = numero_usuario;
+			      }else {
+		          if(numero_usuario < menor ){
+						menor = numero_usuario;
+					}
+			      }
 			}
-			
 
 		}while(numero_usuario != 0);
 		System.out.print("\n\n\n");
@@ -68,6 +71,8 @@ public class ejercicio21 {
 		media = suma_de_numeros / contador;
 		System.out.println("Esta es la media: " +media);
 		entrada.close();
-	}
+	}}
+		
+	
 
-}
+
