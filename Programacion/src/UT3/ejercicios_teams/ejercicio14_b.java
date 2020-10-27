@@ -116,13 +116,14 @@ public class ejercicio14_b {
 	
 			System.out.println("\nEl precio final de su vuelo es: " +precio);
 //Salir---------------------------------------------------------------------------------------------------------
-			System.out.println("¿Desea salir de programa? ( 0 = No ; 1 = Si)");
+			System.out.println("\n¿Desea salir de programa? ( 0 = No ; 1 = Si)");
 			cierre = entrada.nextInt();
+			System.out.println("\n");
 			
 			if(cierre == 1) {
 				System.out.println("Hasta luego");
 			}else {
-				System.out.println("Vuelva a introducir el precio");
+				System.out.flush();
 			}
 			
 		}while(cierre != 1);
