@@ -1,7 +1,7 @@
 /**
  * 
  */
-package UT3.Plantillas;
+package Plantillas;
 import java.util.Scanner;
 /**
  * @author carlos.cg
