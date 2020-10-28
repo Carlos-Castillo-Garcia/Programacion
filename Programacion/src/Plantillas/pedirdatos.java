@@ -16,7 +16,7 @@ public class pedirdatos {
 		// TODO Auto-generated method stub
 		Scanner entrada = new Scanner(System.in);
 		
-//ENTEROS#####################################################		
+//ENTEROS#######################################################		
 		System.out.printf("Introduzca un dato entero:");
 		int entero = entrada.nextInt();
 		System.out.printf("", entero);
