@@ -122,5 +122,6 @@ public class ejercicio15_2 {
 				}
 
 			}while(salir != 1);
+		entrada.close();
 		}			
 }

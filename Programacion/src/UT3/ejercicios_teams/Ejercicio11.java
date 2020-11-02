@@ -45,7 +45,7 @@ public class Ejercicio11 {
 		 
 
 		 
-
+			entrada.close();
 		  
 
 		
