@@ -28,10 +28,7 @@ public class ejercicio3 {
 		System.out.print("El numero introducido es: ");
 		System.out.println(numero);
 		
-		//comentario para el merge
-		System.out.printf("prueba");
-		//comentario para el merge
-		System.out.printf("prueba");
+
 		
 		
 		entrada.close();
