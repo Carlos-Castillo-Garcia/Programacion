@@ -30,6 +30,9 @@ public class ejercicio3 {
 		
 		//comentario para el merge
 		System.out.printf("prueba");
+		//comentario para el merge
+		System.out.printf("prueba");
+		
 		
 		entrada.close();
 	}
