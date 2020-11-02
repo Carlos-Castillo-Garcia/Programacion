@@ -28,7 +28,7 @@ public class ejercicio3 {
 		System.out.print("El numero introducido es: ");
 		System.out.println(numero);
 		
-
+//kjsdfvbnkvsdfbnsfdlkjvg
 		
 		
 		entrada.close();
