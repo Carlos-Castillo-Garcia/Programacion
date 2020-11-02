@@ -1,7 +1,7 @@
 /**
  * 
  */
-package UT3;
+package UT3.ejercicios_teams;
 
 import java.util.Scanner;
 

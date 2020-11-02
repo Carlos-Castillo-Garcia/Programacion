@@ -1,7 +1,7 @@
 /**
  * 
  */
-package UT3;
+package UT3.practicas;
 
 import java.util.Scanner;
 /**
@@ -27,6 +27,8 @@ public class ejercicio3 {
 		
 		System.out.print("El numero introducido es: ");
 		System.out.println(numero);
+		
+		System.out.printf("prueba");
 		
 		entrada.close();
 	}

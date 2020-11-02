@@ -1,7 +1,7 @@
 /**
  * 
  */
-package UT3;
+package UT3.practicas;
 
 /**
  * @author carlos.cg
