@@ -29,6 +29,11 @@ public class ejercicio3 {
 		System.out.println(numero);
 		
 //kjsdfvbnkvsdfbnsfdlkjvg
+		//kjsdfvbnkvsdfbnsfdlkjvg
+		//kjsdfvbnkvsdfbnsfdlkjvg
+		//kjsdfvbnkvsdfbnsfdlkjvg
+		//kjsdfvbnkvsdfbnsfdlkjvg
+		
 		
 		
 		entrada.close();
