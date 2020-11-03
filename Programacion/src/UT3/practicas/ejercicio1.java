@@ -36,6 +36,23 @@ public class ejercicio1 {
 		System.out.printf("%d X 9 = %d \n", numero1, numero1*9); 
 
 		System.out.printf("%d X 10 = %d \n", numero1, numero1*10); 
+		
+		//comentario
+
+		//comentario
+
+		//comentario
+
+		//comentario
+
+		//comentario
+
+		//comentario
+
+		//comentario
+
+		//comentario
+		
 	}
 
 }
