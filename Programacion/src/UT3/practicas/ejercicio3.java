@@ -30,10 +30,7 @@ public class ejercicio3 {
 		
 //kjsdfvbnkvsdfbnsfdlkjvg
 		//kjsdfvbnkvsdfbnsfdlkjvg
-		//kjsdfvbnkvsdfbnsfdlkjvg
-		//kjsdfvbnkvsdfbnsfdlkjvg
-		//kjsdfvbnkvsdfbnsfdlkjvg
-		
+
 		
 		
 		entrada.close();
