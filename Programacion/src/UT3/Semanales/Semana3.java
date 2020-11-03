@@ -21,7 +21,7 @@ public class Semana3 {
 		int minimo;
 		int maximo;
 		int division;
-		int salir;
+		//int salir;
 		
 		minimo = 90 * 45;
 		maximo = 120 * 90;
@@ -44,15 +44,15 @@ public class Semana3 {
 				
 //Salir-------------------------------------------------------------------------------------------------------
 				System.out.println("¿Desea salir del programa? ( 1 = No ; 0 = Si )");
-				salir = entrada.nextInt();
+				real = entrada.nextInt();
 
-				if(salir == 0) {
+				if(real == 0) {
 					System.out.println("Hasta luego");
 				}else {
 					//System.out.println("Vuelva a introducir el precio");
 				}
 
-			}while(salir != 0);
+			}while(real != 0);
 			
 			entrada.close();
 	}
