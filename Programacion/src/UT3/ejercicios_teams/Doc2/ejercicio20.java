@@ -19,9 +19,9 @@ public class ejercicio20 {
 		int numero_usuario;
 		int suma_de_numeros;
 		int aux;
-		int media;
+		float media;
 		int total_suma = 0;
-		int contador = -1;
+		float contador = -1;
 
 
 		System.out.println("Para parar este programa de suma tiene que poner un 0");
@@ -42,7 +42,8 @@ public class ejercicio20 {
 		System.out.println("Esta es la suma de los numeros introducidos: " +suma_de_numeros );
 		
 		media = suma_de_numeros / contador;
-		System.out.println("Esta es la media: " +media);
+		System.out.printf("Esta es la media: %5.2f ", media);
+		
 		
 		entrada.close();
     } 

@@ -25,8 +25,8 @@ public class ejercicio21 {
 		int total_suma = 0;
 		int mayor = 0;
 		int menor = 0;
-		int contador = 0;
-		int media;
+		float contador = 0;
+		float media;
 
 
 		System.out.println("Para parar este programa de suma tiene que poner un 0");
@@ -41,9 +41,9 @@ public class ejercicio21 {
 			total_suma = suma_de_numeros;
 			
 			if(numero_usuario == 0) {
-				
+				System.out.println("Se cierra el programa");
 			}else {
-				contador = contador + 1;
+				contador = contador +1;
 
 		          if(contador == 1) {
 					  mayor = numero_usuario;
@@ -64,12 +64,12 @@ public class ejercicio21 {
 
 		}while(numero_usuario != 0);
 		System.out.print("\n\n\n");
-		System.out.println("el numero de registros introducidos es: " +contador);
+		System.out.printf("el numero de registros introducidos es: %d \n", (int)contador);
 		System.out.println("Esta es la suma de los numeros introducidos: " +suma_de_numeros );
 		System.out.println("el numero mayor introducido es:" +mayor);
 		System.out.println("el numero menor introducido es:" +menor);
 		media = suma_de_numeros / contador;
-		System.out.println("Esta es la media: " +media);
+		System.out.printf("Esta es la media: %5.2f ", media);
 		entrada.close();
 	}}
 		

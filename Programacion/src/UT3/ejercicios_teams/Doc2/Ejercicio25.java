@@ -1,23 +1,20 @@
 /**
  * 
  */
-package Entornos;
-import java.util.Scanner;
+package UT3.ejercicios_teams.Doc2;
 
 /**
  * @author carlos.cg
  *
  */
-public class ejercicio1 {
+public class Ejercicio25 {
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Scanner entrada = new Scanner(System.in);
-		
-		entrada.close();
+
 	}
 
 }
