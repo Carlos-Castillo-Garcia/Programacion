@@ -19,25 +19,37 @@ public class ejercicio40 {
 		Scanner entrada = new Scanner(System.in);
 		
 		int asteriscos;
-		int contador = 0;
-		int contador2 = 0;
+		int vertical = 0;
+		
 		
 		System.out.println("Introduzca un numero de *, para dibujar el triangulo: ");
 		asteriscos = entrada.nextInt();
 
-		while(contador != asteriscos) {
-			
-			
-			if(contador < contador2) {
-				while(contador2 != contador){
-					contador++;
-					System.out.printf("*");
+		while(vertical != asteriscos) {
+			int horizontal = 0;
+			vertical++;
+			if(vertical == 0) {
+				while(horizontal != asteriscos) {
+					horizontal++;
+					if(horizontal == vertical) {
+						System.out.printf("*");
+					}else{
+						System.out.printf(" ");
+					}
 				}
-			}else {
-				contador2++;
-				System.out.printf("a");
+			}else{
+				while(horizontal != asteriscos) {
+					horizontal++;
+					if(horizontal != vertical) {
+						System.out.printf("*");
+					}else{
+						System.out.printf(" ");
+					}
+				}
 			}
+			System.out.printf("\n");
 		}
+
 
 		entrada.close();
 	}
