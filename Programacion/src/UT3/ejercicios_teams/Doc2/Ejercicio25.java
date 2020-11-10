@@ -46,7 +46,6 @@ public class Ejercicio25 {
 					
 			}
 			
-				
 		}while(numero != 0);
 		
 		entrada.close();

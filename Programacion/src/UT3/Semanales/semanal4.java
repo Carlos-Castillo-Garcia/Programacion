@@ -33,7 +33,6 @@ public class semanal4 {
 					elefante = entrada.nextInt();
 					suma = suma + elefante;
 
-
 					if(elefante == 0) {
 						System.out.println("la tela de araña aun aguanta. \n");
 					}	
@@ -42,9 +41,8 @@ public class semanal4 {
 					}
 				}while(elefante != 0 && suma <= arana);
 
-
 				//SALIR########################################################################################
-				System.out.println("¿Desea salir el programa? ( 0 = No ; 1 = Si )");	    //#####
+				System.out.println("¿Desea salir el programa? ( 0 = No ; 1 = Si )");	  	//#####
 				salir = entrada.nextInt();                                              	//#####
 				//#####
 				if(salir == 1) {                                                        	//#####
@@ -55,8 +53,6 @@ public class semanal4 {
 				//SALIR########################################################################################
 			
 		}while(salir != 1);
-		
-
 		
 		entrada.close();
 	}
