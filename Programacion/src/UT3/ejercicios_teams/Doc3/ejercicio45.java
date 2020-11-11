@@ -2,9 +2,7 @@
  * 
  */
 package UT3.ejercicios_teams.Doc3;
-
 import java.util.Scanner;
-
 /**
  * @author CARLOS
  *
@@ -17,37 +15,42 @@ public class ejercicio45 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner entrada = new Scanner(System.in);
-
+		
 		int lado;
-		int contador = 0;
-
+		int contvertical = 1;
+		
 		System.out.println("Introduzca un numero de * por lado, para dibujar el cuadrado: ");
 		lado = entrada.nextInt();
 
-		while(contador <= lado) {
-			int contador2 = 0;
-			if(contador==1||contador==lado) {
-				while(contador2 != lado){
-					contador2++;
+		//vertical
+		while(contvertical <= lado) {
+			int conthorizontal = 1;
+			//horizontal
+			if(contvertical == 1 || contvertical == lado) {
+				
+				while(conthorizontal <= lado){
+					conthorizontal++;
 					System.out.printf("* ");
 				}
-
+				
 			}else {
-				if(contador==1||contador==lado) {
-					while(contador2 != lado){
-						contador2++;
-						System.out.printf(" ");
-					}
-				}else {
-					while(contador2 != lado){
-						contador2++;
+				
+				while(conthorizontal <= lado){
+
+					if(conthorizontal == 1 || conthorizontal == lado) {
+						conthorizontal++;
 						System.out.printf("* ");
+					}else {
+						conthorizontal++;
+						System.out.printf("  ");
 					}
+
 				}
 			}
-			contador++;
+			contvertical++;
 			System.out.printf("\n");
 		}
+		
 
 		entrada.close();
 	}

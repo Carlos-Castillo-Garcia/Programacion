@@ -22,17 +22,17 @@ public class ejercicio36 {
 		System.out.println("Introduzca un numero de * por lado, para dibujar el cuadrado: ");
 		lado = entrada.nextInt();
 
-			while(contador != lado) {
-				if(contador == 1 || contador == lado) {
-				int contador2 = 0;
-				while(contador2 != lado){
-					contador2++;
-					System.out.printf("*");
-				}
-				contador++;
-				System.out.printf("\n");
-				}
+		//vertical
+		while(contador != lado) {
+			int contador2 = 0;
+			//horizontal
+			while(contador2 != lado){
+				contador2++;
+				System.out.printf("* ");
 			}
+			contador++;
+			System.out.printf("\n");
+		}
 		
 
 		entrada.close();
