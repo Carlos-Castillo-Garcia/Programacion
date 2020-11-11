@@ -49,8 +49,7 @@ public class Ejercicio26 {
 				
 			}else{	
 			}
-		}
-				
+		}	
 		entrada.close();
 		
 
