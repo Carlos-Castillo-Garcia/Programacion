@@ -23,7 +23,7 @@ public class ejercicio35 {
 		System.out.println("Estas son las tablas de multiplicar: ");
 		
 		for(multiplo = 1; multiplo <= 10; multiplo++) {
-			
+			System.out.printf("\nEsta es la tabla del %d: ", multiplo);
 			System.out.println("\n");
 			
 			for(numero = 1; numero <= 10; numero++) {
