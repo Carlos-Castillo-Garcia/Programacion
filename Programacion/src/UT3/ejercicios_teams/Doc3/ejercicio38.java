@@ -32,9 +32,9 @@ public class ejercicio38 {
 				while(contador2 != lado) {
 					contador2++;
 					if(contador2 % 2 == 0) {
-						System.out.printf("*");
+						System.out.printf("* ");
 					}else{
-						System.out.printf(" ");
+						System.out.printf("  ");
 					}
 				}
 			}else{
@@ -42,9 +42,9 @@ public class ejercicio38 {
 				while(contador2 != lado) {
 					contador2++;
 					if(contador2 % 2 != 0) {
-						System.out.printf("*");
+						System.out.printf("* ");
 					}else{
-						System.out.printf(" ");
+						System.out.printf("  ");
 					}
 				}
 			}

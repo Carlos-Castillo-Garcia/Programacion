@@ -22,17 +22,17 @@ public class ejercicio37 {
 		int altura;
 		int contador = 0;
 		
-		System.out.println("Introduzca un numero de * de la base, para dibujar el cuadrado: ");
+		System.out.println("Introduzca un numero de * de la base, para dibujar el rectangulo: ");
 		base = entrada.nextInt();
 		
-		System.out.println("Introduzca un numero de * de la altura, para dibujar el cuadrado: ");
+		System.out.println("Introduzca un numero de * de la altura, para dibujar el rectangulo: ");
 		altura = entrada.nextInt();
 		
 		while(contador != altura) {
 			int contador2 = 0;
 			while(contador2 != base){
 				contador2++;
-				System.out.printf("*");
+				System.out.printf("* ");
 			}
 			contador++;
 			System.out.printf("\n");

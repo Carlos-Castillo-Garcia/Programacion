@@ -29,11 +29,12 @@ public class ejercicio40 {
 		
 		while(vertical != asteriscos) {
 			vertical++;
+
 			for(int contadorinverso2 = 0; contadorinverso2 < contadorinverso; contadorinverso2++){
-				System.out.printf(" *");
+				System.out.printf(" ");
 			}
 			for(int horizontal = 0; horizontal != vertical; horizontal++) {
-				System.out.printf(" ");
+				System.out.printf("* ");
 			}
 			contadorinverso--;
 			System.out.printf("\n");
