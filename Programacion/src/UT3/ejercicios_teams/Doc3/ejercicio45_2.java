@@ -22,27 +22,32 @@ public class ejercicio45_2 {
 		lado = entrada.nextInt();
 
 		for(int exterior = 0; exterior < lado; exterior++) {
-			System.out.printf("ex ");
+			System.out.printf("* ");
 		}
 		System.out.println();
 
 		for(int exterior = 0; exterior < lado - 2; exterior++) {
-			System.out.printf("ex ");
-			for(int vacio = 1; vacio < lado - 2;) {
-				System.out.printf("va ");
-				vacio++;
-				for(int interior = 1; interior <= (lado - 2) - 2;) {
-					System.out.printf("in ");
-					interior++;
+			System.out.printf("* ");
+			if ( exterior == 0 || exterior == lado - 3) {
+				
+				for(int vacio = 1; vacio < lado - 1;) {
+					System.out.printf("  ");
 					vacio++;
 				}
-				
-			}
-			System.out.println("va ex     salto de linea");
+			}else {
+				System.out.printf("  ");
+				for(int interior = 1; interior <= (lado - 2) - 2;) {
+					System.out.printf("* ");
+					interior++;
+				}
+				System.out.printf("  ");
+			}	
+			
+			System.out.println("* ");
 		}
 
 		for(int exterior = 0; exterior < lado; exterior++) {
-			System.out.printf("ex ");
+			System.out.printf("* ");
 		}
 
 		entrada.close();
