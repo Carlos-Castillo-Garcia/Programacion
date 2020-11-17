@@ -7,7 +7,7 @@ package UT3.ejercicios_teams.Doc3;
  * @author CARLOS
  *
  */
-public class ejercicio35 {
+public class ejercicio49 {
 
 	/**
 	 * @param args

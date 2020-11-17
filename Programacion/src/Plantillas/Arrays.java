@@ -18,6 +18,8 @@ public class Arrays {
 		
 		int array1 [];
 		array1 = new int [3];
+		
+		int array2 [] = new int [3];
 			
 		entrada.close();
 	}
