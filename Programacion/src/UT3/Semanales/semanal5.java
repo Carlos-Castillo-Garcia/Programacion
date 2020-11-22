@@ -29,6 +29,10 @@ public class semanal5 {
 		
 
 //RECOGIDA DE DATOS------------------------------------------------------
+		System.out.println("## Los rango para introducir los numero de la cartas son del 2 - 14(AS) ##");
+		System.out.println("## Para introducir los palos debes de poner: ## ");
+		System.out.println("			d = Diamantes \n 			c = Corazones \n 			t = Treboles \n 			p = Picas \n");
+		System.out.println("Por favor introduzca las carta de su mano: \n");
 		for(int mano = 0, nºcarta = 1 ;mano < 4;){
 			System.out.printf("Carta %d \n", nºcarta);
 			System.out.printf("Valor: ");
@@ -37,29 +41,17 @@ public class semanal5 {
 			if(valorcarta[mano] >= 2 && valorcarta[mano] <= 14) {
 				System.out.printf("Palo: ");
 				palo [mano] = entrada.next().charAt(0);
+				System.out.println("");
 	
-				if(palo[mano] == 'd'){
-					System.out.println("\n\n funciona diamantes\n\n");
-					nºcarta++;
-					mano++;
-				}else  if(palo[mano] == 'c'){
-					System.out.println("\n\n funciona corazones\n\n");
-					nºcarta++;
-					mano++;
-				}else if(palo[mano] == 't') {
-					System.out.println("\n\n funciona treboles\n\n");
-					nºcarta++;
-					mano++;
-				}else if(palo[mano] == 'p') {
-					System.out.println("\n\n funciona picas\n\n");
+				if(palo[mano] == 'd' || palo[mano] == 'c' || palo[mano] == 't' || palo[mano] == 'p'){
 					nºcarta++;
 					mano++;
 				}else {
-					System.out.println("\n\n Palo erroneo \n\n");
+					System.out.println("\n Palo erroneo \n");
 				}
 				
 			}else {
-				System.out.println("\n\n numero erroneo\n\n");
+				System.out.println("\n numero erroneo\n");
 			}
 		}
 //FIN RECOGIDAD DE DATOS--------------------------------------------------
@@ -67,22 +59,34 @@ public class semanal5 {
 //COMPROBACION PALOS------------------------------------------------------
 		
 			if(palo[posipalocarta] == palo[posipalocarta+1] && palo[posipalocarta] == palo[posipalocarta+2] && palo[posipalocarta] == palo[posipalocarta+3]) {
+//ORDENADO DE NUMERO DE CARTA---------------------------------------------
 				Arrays.sort(valorcarta);
+//FIN DE ORDENADO DE NUMERO DE CARTA--------------------------------------
+
+//IMPRESION DE MANO-------------------------------------------------------
 				System.out.printf("La mano que tenemos es: \n\n" );
 				for(int manos = 0, cont1 = 1; manos < 4 ; manos++, cont1++) {
 				System.out.printf(" 		carta %d = %d %c \n", cont1, valorcarta[manos], palo[manos]);
 				}
-				contvalorcarta = -1;
+//FIN DE IMPRESION DE MANO------------------------------------------------
+				
+//COMPROBACION DE NUMERO--------------------------------------------------
+				contvalorcarta = 0;
 				cont = 0;
 				correlativo = 0;
-				do{
-					contvalorcarta++;
-					cont++;
-					correlativo++;
-				}while(valorcarta[contvalorcarta+1]-valorcarta[contvalorcarta] == 1 && cont < valorcarta.length);
-				
-				if(correlativo == valorcarta.length-2) {
+//COMPROBACION DE CORRELATIVIDAD------------------------------------------
+				while(valorcarta[contvalorcarta+1]-valorcarta[contvalorcarta] == 1 && cont < valorcarta.length-1){
+					if(cont < valorcarta.length-2) {
+						contvalorcarta++;
+					}
 					
+					correlativo++;
+					cont++;
+					
+				};
+//FIN DE COMPROBACION DE CORRELATIVIDAD-----------------------------------
+				if(correlativo == valorcarta.length-1) {					
+//IMPRESION DE LA CARTA SIENDO CORRELATIVOS-------------------------------
 					if(valorcarta[posivalorcarta] == 2 ) {
 						System.out.printf("               ---------------");
 						System.out.printf("\nNecesitas	carta 5 = %d %c", valorcarta[posivalorcarta]+4, palo[posipalocarta]);
@@ -92,7 +96,14 @@ public class semanal5 {
 						System.out.printf("               ----------------");
 						System.out.printf("\nNecesitas	carta 5 = %d %c", valorcarta[posivalorcarta]-1, palo[posipalocarta]);
 						System.out.printf("\n               ----------------");
+					}else {
+						System.out.printf("               ----------------");
+						System.out.printf("\nNecesitas	carta 5 = %d %c", valorcarta[posivalorcarta]-1, palo[posipalocarta]);
+						System.out.printf("\nO");
+						System.out.printf("\nNecesitas	carta 5 = %d %c", valorcarta[posivalorcarta+3]+1, palo[posipalocarta]);
+						System.out.printf("\n               ----------------");
 					}
+//IMPRESION DE LA CARTA SIENDO CORRELATIVOS--------------------------------
 				}else {
 					if(valorcarta[valorcarta.length-1]-valorcarta[posivalorcarta] == valorcarta.length) {
 						contvalorcarta = -1;
@@ -108,6 +119,8 @@ public class semanal5 {
 						System.out.printf("\nNecesitas	carta 5 = %d %c", valorcarta[contvalorcarta]+1, palo[posipalocarta]);
 						System.out.printf("\n               ---------------");
 						
+						
+						
 					}else {
 						System.out.print("No es posible hacer escalera de color");
 					}
@@ -116,8 +129,9 @@ public class semanal5 {
 				
 				
 			}else {
-				System.out.printf(" error de palos");
+				System.out.printf("Con las cartas de estos palos no se puede hacer una escalera de color");
 			}
+//FIN COMPROBACION PALOS------------------------------------------------------
 		
 
 		
