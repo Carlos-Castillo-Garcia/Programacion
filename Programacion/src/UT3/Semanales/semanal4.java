@@ -44,7 +44,7 @@ public class semanal4 {
 				//SALIR########################################################################################
 				System.out.println("¿Desea salir el programa? ( 0 = No ; 1 = Si )");	  	//#####
 				salir = entrada.nextInt();                                              	//#####
-				//#####
+																							//#####
 				if(salir == 1) {                                                        	//#####
 					System.out.println("Hasta luego");                                  	//#####
 				}else {                                                                 	//#####
