@@ -24,13 +24,13 @@ public class ejercicio71 {
 
 		for(int cont = 0; cont < tabla1.length; cont++) {
 			for(int cont2 = 0;cont2 < tabla1.length;cont2++) {
-				tabla1[cont][cont2] = Math.floor(Math.random()*100);
+				tabla1[cont][cont2] = (int)(Math.random()*100);
 			}
 		}
 
 		for(int cont = 0; cont < tabla2.length; cont++) {
 			for(int cont2 = 0;cont2 < tabla2.length;cont2++) {
-				tabla2[cont][cont2] = Math.floor(Math.random()*100);
+				tabla2[cont][cont2] = (int)(Math.random()*100);
 			}
 		}
 
