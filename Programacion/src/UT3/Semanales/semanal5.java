@@ -131,6 +131,7 @@ public class semanal5 {
 			}else {
 				System.out.printf("Con las cartas de estos palos no se puede hacer una escalera de color");
 			}
+			
 //FIN COMPROBACION PALOS------------------------------------------------------
 		
 
