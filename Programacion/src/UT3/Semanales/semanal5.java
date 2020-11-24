@@ -58,7 +58,7 @@ public class semanal5 {
 		
 //COMPROBACION PALOS------------------------------------------------------
 		
-			//if(palo[posipalocarta] == palo[posipalocarta+1] && palo[posipalocarta] == palo[posipalocarta+2] && palo[posipalocarta] == palo[posipalocarta+3]) {
+			if(palo[posipalocarta] == palo[posipalocarta+1] && palo[posipalocarta] == palo[posipalocarta+2] && palo[posipalocarta] == palo[posipalocarta+3]) {
 //ORDENADO DE NUMERO DE CARTA---------------------------------------------
 				Arrays.sort(valorcarta);
 //FIN DE ORDENADO DE NUMERO DE CARTA--------------------------------------
@@ -128,9 +128,9 @@ public class semanal5 {
 				}
 				
 				
-//			}else {
-//				System.out.printf("Con las cartas de estos palos no se puede hacer una escalera de color");
-//			}
+			}else {
+				System.out.printf("Con las cartas de estos palos no se puede hacer una escalera de color");
+			}
 //FIN COMPROBACION PALOS------------------------------------------------------
 		
 
