@@ -69,12 +69,12 @@ public class semanal5 {
 				System.out.printf(" 		carta %d = %d %c \n", cont1, valorcarta[manos], palo[manos]);
 				}
 //FIN DE IMPRESION DE MANO------------------------------------------------
-				
-//COMPROBACION DE NUMERO--------------------------------------------------
+
+//COMPROBACION DE CORRELATIVIDAD------------------------------------------
 				contvalorcarta = 0;
 				cont = 0;
 				correlativo = 0;
-//COMPROBACION DE CORRELATIVIDAD------------------------------------------
+				
 				while(valorcarta[contvalorcarta+1]-valorcarta[contvalorcarta] == 1 && cont < valorcarta.length-1){
 					if(cont < valorcarta.length-2) {
 						contvalorcarta++;
@@ -103,9 +103,10 @@ public class semanal5 {
 						System.out.printf("\nNecesitas	carta 5 = %d %c", valorcarta[posivalorcarta+3]+1, palo[posipalocarta]);
 						System.out.printf("\n               ----------------");
 					}
-//IMPRESION DE LA CARTA SIENDO CORRELATIVOS--------------------------------
+//FIN IMPRESION DE LA CARTA SIENDO CORRELATIVOS--------------------------------
 				}else {
 					if(valorcarta[valorcarta.length-1]-valorcarta[posivalorcarta] == valorcarta.length) {
+//COMPROBACION DE CORRELATIVIDAD------------------------------------------
 						contvalorcarta = -1;
 						cont = 0;
 						correlativo = 0;
@@ -114,6 +115,7 @@ public class semanal5 {
 							cont++;
 							correlativo++;
 						}while(valorcarta[contvalorcarta+1]-valorcarta[contvalorcarta] == 1 && cont < valorcarta.length );
+//FIN DE COMPROBACION DE CORRELATIVIDAD-----------------------------------
 						
 						System.out.printf("               ---------------");
 						System.out.printf("\nNecesitas	carta 5 = %d %c", valorcarta[contvalorcarta]+1, palo[posipalocarta]);
@@ -126,51 +128,14 @@ public class semanal5 {
 					}
 					
 				}
-				
+//FIN IMPRESION DE LA CARTA NO SIENDO CORRELATIVOS--------------------------------				
 				
 			}else {
 				System.out.printf("Con las cartas de estos palos no se puede hacer una escalera de color");
 			}
+			
 //FIN COMPROBACION PALOS------------------------------------------------------
-		
-
-		
 		entrada.close();
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
