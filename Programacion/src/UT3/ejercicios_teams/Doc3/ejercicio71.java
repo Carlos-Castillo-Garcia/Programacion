@@ -15,35 +15,52 @@ public class ejercicio71 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+		int tabla[][]=new int[3][3];
+        int tabla2[][]=new int[3][3];
+        int tabla3[][]=new int[3][3];
 
-		double tabla1 [][] = new double [3][3];
+        System.out.println("La primera tabla:");
 
-		double tabla2 [][] = new double [3][3];
+        for(int i=0; i<tabla.length; i++) {
+            tabla[0][i]=i+1;
+            tabla[i][0]=tabla[0][i];
+        }
 
-		int tablasuma [][] = new int [3][3];
+        for(int i=0; i<tabla.length; i++) {
+            System.out.printf("%d\t",tabla[i][0]);
+            for(int j=1; j<tabla.length; j++) {
+                tabla[i][j]=tabla[0][j]*(i+1);
+                System.out.printf("%d\t",tabla[i][j]);
+            }
+            System.out.println("");
+        }
 
-		for(int cont = 0; cont < tabla1.length; cont++) {
-			for(int cont2 = 0;cont2 < tabla1.length;cont2++) {
-				tabla1[cont][cont2] = (int)(Math.random()*100);
-			}
-		}
+        System.out.println("La segunda tabla:");
 
-		for(int cont = 0; cont < tabla2.length; cont++) {
-			for(int cont2 = 0;cont2 < tabla2.length;cont2++) {
-				tabla2[cont][cont2] = (int)(Math.random()*100);
-			}
-		}
+        for(int i=0; i<tabla2.length; i++) {
+            tabla2[0][i]=i+1;
+            tabla2[i][0]=tabla[0][i];
+        }
 
-		for(int contsum = 0, cont = 0; contsum < tablasuma.length; contsum++, cont++) {
-			for(int contsum2 = 0, cont2 = 0; contsum2 < tablasuma.length; contsum2++, cont2++) {
-				tablasuma[contsum][contsum2] = (int) (tabla1[cont][cont2] + tabla2[cont][cont2]);
+        for(int i=0; i<tabla2.length; i++) {
+            System.out.printf("%d\t",tabla2[i][0]);
+            for(int j=1; j<tabla2.length; j++) {
+                tabla2[i][j]=tabla2[0][j]*(i+1);
+                System.out.printf("%d\t",tabla2[i][j]);
+            }
+            System.out.println("");
+        }
 
-				System.out.print(tabla1[cont][cont2]+"+"+tabla2[cont][cont2]+"="+tablasuma[contsum][contsum2]+"\n");
-				
-			}
-			System.out.println("");
-		}
+        System.out.println("La tercera tabla:");
 
-	}
+        for(int i=0; i<tabla3.length; i++) {
+            for(int j=0; j<tabla3.length; j++) {
+                tabla3[i][j]=tabla[i][j]+tabla2[i][j];
+                System.out.printf("%d\t",tabla3[i][j]);
+            }
+            System.out.println("");
+        }
+
+    }
 
 }
