@@ -33,7 +33,7 @@ public class Salir {
 		if(salir == 1) {                                                       //#####
 			System.out.println("Hasta luego");                                 //#####
 		}else {                                                                //#####
-			System.out.println("Vuelva a introducir el precio");               //#####
+			System.out.println("");               							   //#####
 		}																	   //#####
 //SALIR###############################################################################
 		entrada.close();
