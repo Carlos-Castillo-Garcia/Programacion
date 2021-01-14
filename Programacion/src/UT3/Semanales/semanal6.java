@@ -74,15 +74,15 @@ public class semanal6 {
 
 
 	}
-	private static int salida(Scanner entrada, int salir) {
+	private static int salida(Scanner a, int b) {
 		System.out.println("¿Desea salir del programa? ( 0 = No ; 1 = Si )");  
-		salir = entrada.nextInt();                                            
-		if(salir == 1) {                                                    
+		b = a.nextInt();                                            
+		if(b == 1) {                                                    
 			System.out.println("Hasta luego");                               
 		}else {                                                                
 			System.out.println("");               							  
 		}
-		return salir;
+		return b;
 	}
 	private static String pedida(String a, int b, Scanner entrada) {
 		
