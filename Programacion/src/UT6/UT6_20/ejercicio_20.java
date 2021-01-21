@@ -18,6 +18,7 @@ public class ejercicio_20 {
 		// TODO Auto-generated method stub
 		
 		Persona yo = new Persona();
+
 	
 		//pedida de todas las variables 
 		yo.setnombre("Carlos IsMa");

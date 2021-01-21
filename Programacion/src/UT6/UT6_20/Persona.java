@@ -8,7 +8,7 @@ package UT6.UT6_20;
  *
  */
 public class Persona {
-	//Creacion de las variables privadas
+	//Creacion de las atributos privados
 	private String nombre;
 	private String apellidos;
 	private int anionacimiento;
