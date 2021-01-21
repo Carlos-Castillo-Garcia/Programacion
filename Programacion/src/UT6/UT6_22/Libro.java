@@ -21,10 +21,10 @@ public class Libro {
 	
 	public Libro(String t, String a, int e, int ep) {
 		
-		this.titulo = t;
-		this.autor = a;
-		this.ejemplares = e;
-		this.prestado = ep;
+		settitulo(t);
+		setautor(a);
+		setejemplares(e);
+		setprestado(ep);
 		
 	}
 	//Metodos
@@ -36,45 +36,96 @@ public class Libro {
 			public String getautor() {
 				return autor;
 			}
-			public int ejemplares() {
+			public int getejemplares() {
 				return ejemplares;
 			}
-			public int prestado() {
+			public int getprestado() {
 				return prestado;
 			}
 		
 		//Setters
-			public void settitulo() {
-				
+			public void settitulo(String t) {
+				if(t == "") {
+					System.out.println("No ha introducido ningun libro");
+				}
+				this.titulo = t;
 			}
-			public void setautor() {
-				
+			public void setautor(String a) {
+				if(a == "") {
+					System.out.println("No ha introducido ningun autor");
+				}
+				this.autor = a;
 			}
-			public void setejemplares() {
-				
+			public void setejemplares(int e) {
+				if(e == 0) {
+					System.out.println("No hay ningun ejemplar");
+				}
+				this.ejemplares = e;
 			}
-			public void setprestado() {
-				
+			public void setprestado(int p) {
+				if(p == 0) {
+					System.out.println("No hay ningun ejemplar prestado");
+				}
+				this.prestado = p;
 			}
 			
 		//Funciones
-			public void incremento() {
+			public void prestamo() {
 				prestado++;
 			}
-			
-			public void p_ejemplares() {
-				if(ejemplares > 0) {
+			public boolean prestamo(int p){
+				boolean dp = false;
+				
+				if(prestado < 10) {
+					dp = true;
 					prestado++;
-				}
-			}
-			public void operacion() {
-				boolean o = false;
-				if() {
+				}else {
+					dp = false;
 					
 				}
-				
+				return dp;
 			}
-			public int devolucion(int p) {
+			public void devolucion(String c) {
+				c = "no";
+				if(c != "no") {
+					prestado--;
+				}
+			}
+			public boolean devolver_p(){
+				boolean dp = false;
 				
+				if(prestado > 0) {
+					dp = true;
+					prestado--;
+				}else {
+					dp = false;
+					
+				}
+				return dp;
+			}
+			public int ejem_restantes() {
+				int rest = getejemplares() - getprestado();
+				return rest;
+			}
+			public String titulos() {
+				return "Estos son los libros que hay en estos momentos:"+ gettitulo();
+			}
+			public String autor() {
+				return "Estos son los autores que hay en estos momentos:"+ getautor();
+			}
+			public String dato_ejemplares() {
+				return "Estos son los ejemplares que hay en estos momentos:" + ejem_restantes() + ".";
 			}
 }
+
+
+
+
+
+
+
+
+
+
+
+
