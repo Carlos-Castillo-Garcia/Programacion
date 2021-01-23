@@ -114,7 +114,7 @@ public class Libro {
 				return "Estos son los autores que hay en estos momentos:"+ getautor();
 			}
 			public String dato_ejemplares() {
-				return "Estos son los ejemplares que hay en estos momentos:" + ejem_restantes() + ".";
+				return "Estos son los ejemplares que hay en estos momentos: " + ejem_restantes() + ".";
 			}
 }
 
