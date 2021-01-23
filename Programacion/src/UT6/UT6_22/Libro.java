@@ -5,6 +5,7 @@ package UT6.UT6_22;
 
 /**
  * @author CARLOS
+ * @param <Scanner>
  *
  */
 public class Libro {
@@ -27,6 +28,7 @@ public class Libro {
 		setprestado(ep);
 		
 	}
+	
 	//Metodos
 	
 		//Getters
@@ -69,52 +71,54 @@ public class Libro {
 				this.prestado = p;
 			}
 			
-		//Funciones
+		//Funciones para las comprovaciones
 			public void prestamo() {
-				prestado++;
+					prestado++;	
 			}
-			public boolean prestamo(int p){
+			public boolean prestar(int p){/*Comprobante del prestamo*/
 				boolean dp = false;
 				
-				if(prestado < 10) {
+				if(p < 10) {
 					dp = true;
-					prestado++;
 				}else {
 					dp = false;
 					
 				}
 				return dp;
 			}
-			public void devolucion(String c) {
-				c = "no";
-				if(c != "no") {
+			public void devolucion() {
 					prestado--;
-				}
 			}
-			public boolean devolver_p(){
+			public boolean devolver_p(int p){/*Comprobante de la devolucion*/
 				boolean dp = false;
 				
-				if(prestado > 0) {
+				if(p > 0) {
 					dp = true;
-					prestado--;
 				}else {
 					dp = false;
 					
 				}
 				return dp;
 			}
+			
+		//Funciones para calculo de datos
 			public int ejem_restantes() {
 				int rest = getejemplares() - getprestado();
 				return rest;
 			}
-			public String titulos() {
-				return "Estos son los libros que hay en estos momentos:"+ gettitulo();
+			
+		//Funciones para sacar datos
+			public String dato_titulos() {
+				return "Estos son los libros que hay en estos momentos: "+ gettitulo();
 			}
-			public String autor() {
-				return "Estos son los autores que hay en estos momentos:"+ getautor();
+			public String dato_autor() {
+				return "Estos son los autores que hay en estos momentos: "+ getautor();
 			}
 			public String dato_ejemplares() {
-				return "Estos son los ejemplares que hay en estos momentos: " + ejem_restantes() + ".";
+				return "Estos son los ejemplares que hay en estos momentos: " + gettitulo() + " estos son los disponibles para prestar " + ejem_restantes() + ".";
+			}
+			public String dato_devoluciones() {
+				return "Estos son los libros que tienes para devolver: "+ gettitulo();
 			}
 }
 
