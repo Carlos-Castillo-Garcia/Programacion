@@ -2,15 +2,12 @@
  * 
  */
 package UT6.UT6_22;
-
 import java.util.Scanner;
-
 /**
  * @author CARLOS
  *
  */
 public class ejercicio_22 {
-
 	/**
 	 * @param args
 	 */
@@ -19,7 +16,6 @@ public class ejercicio_22 {
 
 		//Creado de variables
 		String sn = " ";
-		
 
 		//Llamada a contructor
 		Libro libro1 = new Libro();
@@ -30,6 +26,7 @@ public class ejercicio_22 {
 		libro1.setautor("Chiquito de la calzada");
 		libro1.setejemplares(10);
 		libro1.setprestado(9);
+		
 		libro2.settitulo("el ultimo mohicano");
 		libro2.setautor("Chiquito de la calzada");
 		libro2.setejemplares(5);
