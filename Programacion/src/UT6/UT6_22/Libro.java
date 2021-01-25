@@ -13,7 +13,7 @@ public class Libro {
 	private String titulo;
 	private String autor;
 	private int ejemplares;
-	private int prestado;
+	private int prestados;
 	
 	//Constructores
 	public Libro() {
@@ -21,12 +21,10 @@ public class Libro {
 	}
 	
 	public Libro(String t, String a, int e, int ep) {
-		
 		settitulo(t);
 		setautor(a);
 		setejemplares(e);
 		setprestado(ep);
-		
 	}
 	
 	//Metodos
@@ -42,7 +40,7 @@ public class Libro {
 				return ejemplares;
 			}
 			public int getprestado() {
-				return prestado;
+				return prestados;
 			}
 		
 		//Setters
@@ -68,32 +66,27 @@ public class Libro {
 				if(p == 0) {
 					System.out.println("No hay ningun ejemplar prestado");
 				}
-				this.prestado = p;
+				this.prestados = p;
 			}
 			
-		//Funciones para las comprovaciones
-			public void prestamo() {
-					prestado++;	
-			}
-			public boolean prestar(int p){/*Comprobante del prestamo*/
+			public boolean prestamo(){
 				boolean dp = false;
 				
-				if(p < 10) {
+				if(prestados < ejemplares) {
 					dp = true;
+					prestados++;
 				}else {
 					dp = false;
 					
 				}
 				return dp;
 			}
-			public void devolucion() {
-					prestado--;
-			}
-			public boolean devolver_p(int p){/*Comprobante de la devolucion*/
+			public boolean devolucion(){
 				boolean dp = false;
 				
-				if(p > 0) {
+				if(prestados > 0) {
 					dp = true;
+					prestados--;
 				}else {
 					dp = false;
 					
