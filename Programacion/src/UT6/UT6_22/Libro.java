@@ -74,24 +74,28 @@ public class Libro {
 			}
 			
 			/**
+			 * @param Titulo del libro
 			 * @return Metodo setter para sacar el atributo titulo
 			 */
 			public void settitulo(String t) {
 				this.titulo = t;
 			}
 			/**
+			 * @param Autor del libro
 			 * @return Metodo setter para sacar el atributo autor
 			 */
 			public void setautor(String a) {
 				this.autor = a;
 			}
 			/**
+			 * @param Ejemplares del libro
 			 * @return Metodo setter para sacar el atributo ejemplares
 			 */
 			public void setejemplares(int e) {
 				this.ejemplares = e;
 			}
 			/**
+			 * @param Ejemlares prestados del libro
 			 * @return Metodo setter para sacar el atributo prestados
 			 */
 			public void setprestado(int p) {
