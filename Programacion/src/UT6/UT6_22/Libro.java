@@ -39,7 +39,7 @@ public class Libro {
 		 * @param ejemeplares del constructor con parametros
 		 * @param ejemlares prestados del constructor con parametros
 		 */
-		public Libro(String t, String a, int e, int ep) {
+		public Libro(String t, String a, int e, int ep){
 			settitulo(t);
 			setautor(a);
 			setejemplares(e);

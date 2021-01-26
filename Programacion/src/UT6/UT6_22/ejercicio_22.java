@@ -65,7 +65,7 @@ public class ejercicio_22 {
 		libro1.setprestado(0);
 
 		//ejercicio 8
-		if(libro1.devolucion() == true) {
+		if(libro1.devolucion() == true){
 			System.out.println("La devolucion se ha completado");
 			System.out.println("El numero de ejemplares prestados es: " +libro1.getprestados()+"\n\n");
 		}else {
