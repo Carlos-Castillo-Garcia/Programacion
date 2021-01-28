@@ -20,14 +20,14 @@ public class biblioteca {
 		Scanner varstring = new Scanner(System.in);
 		Scanner varint = new Scanner(System.in);
 		Scanner varopcion = new Scanner(System.in);
-		
+
 		ArrayList<Libro>catalogo = new ArrayList<Libro>();
 		String titulo;
 		String autor;
 		int ejemplares;
 		int prestados;
 		int opcion = 0;
-		
+
 		do {
 			System.out.println("Estas son las opciones a elegir del menu:");
 			System.out.println("[1] Dar de alta un libro");
@@ -48,27 +48,27 @@ public class biblioteca {
 					ejemplares = varint.nextInt();
 					System.out.println("\nLibros prestados:");
 					prestados = varint.nextInt();
-					
+	
 					if(ejemplares < prestados) {
 						prestados = 0;
 					}
-					
+	
 					catalogo.add(new Libro(titulo, autor, ejemplares, prestados));
 					System.out.println("\nEl libro esta dado de alta.\n");
 					break;
-					
+	
 				case 2:
 					System.out.println("Has seleccionado la opcion de ver los libro que hay.\n\n");
 					System.out.println("Estos son los libro que hay introducidos: ");
 					for(int i = 0, contador = 1; i < catalogo.size(); i++, contador++) {
 						System.out.println("Libro "+contador+": \n "
-													+"Titulo: "
-													+ catalogo.get(i).gettitulo()+".\n "
-													+"Autor: "
-													+ catalogo.get(i).getautor()+".\n "
-													+"Tiene "+ catalogo.get(i).getejemplares()+" ejemplares.\n "
-													+"De los cuales "
-													+ catalogo.get(i).getprestados()+" estan prestados.\n");
+								+"Titulo: "
+								+ catalogo.get(i).gettitulo()+".\n "
+								+"Autor: "
+								+ catalogo.get(i).getautor()+".\n "
+								+"Tiene "+ catalogo.get(i).getejemplares()+" ejemplares.\n "
+								+"De los cuales "
+								+ catalogo.get(i).getprestados()+" estan prestados.\n");
 					}
 					break;
 				case 3:
@@ -80,23 +80,27 @@ public class biblioteca {
 						System.out.println("El libro se ha borrado correctamente. \n");
 					}
 					break;
-					
+	
 				case 4:
 					System.out.println("Has seleccionado la opcion de hacer un prestamo.");
 					System.out.println("Introduzca el titulo del libro que quiere prestar: ");
 					titulo = varstring.nextLine();
 					for(int i = 0; i < catalogo.size(); i++) {
-						if(catalogo.get(i).getejemplares() > catalogo.get(i).getprestados()) {
-							catalogo.get(i).setprestado(catalogo.get(i).getprestados()+1);
-							//System.out.println("El libro ha sido prestado\n");
+						if(catalogo.get(i).gettitulo().equals(titulo)) {
+							if (catalogo.get(i).getejemplares() > catalogo.get(i).getprestados()){
+								catalogo.get(i).setprestado(catalogo.get(i).getprestados()+1);
+								System.out.println("El libro ha sido prestado\n");
+							}else {
+								System.out.println("El libro no ha sido prestado\n");
+							}
 						}else {
-							//System.out.println("El libro no ha sido prestado\n");
+							System.out.println("Este libro no existe en nuestra biblioteca\n");
 						}
 					}
 					break;
 				case 0:
 					System.out.println("Hasta luego");
-			}
+				}
 		}while(opcion != 0);
 		varstring.close();
 		varint.close();
