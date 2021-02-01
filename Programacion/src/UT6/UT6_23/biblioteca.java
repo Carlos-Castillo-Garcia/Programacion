@@ -39,6 +39,7 @@ public class biblioteca {
 			opcion = varopcion.nextInt();
 			System.out.println("");
 			switch(opcion){
+			
 				case 1:
 					System.out.println("Has seleccionado la opcion de dar de alta un libro, \nIntroduzca los datos del libro a continuacion: \n");
 					System.out.println("Titulo del libro:");
