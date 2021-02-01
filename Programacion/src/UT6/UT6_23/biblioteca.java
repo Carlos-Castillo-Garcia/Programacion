@@ -76,8 +76,12 @@ public class biblioteca {
 					System.out.println("Introduzca el titulo del libro que quiere borrar: ");
 					titulo = varstring.nextLine();
 					for(int i = 0; i < catalogo.size(); i++) {
-						catalogo.remove(i).gettitulo().equals(titulo);
-						System.out.println("El libro se ha borrado correctamente. \n");
+						if(catalogo.get(i).gettitulo().equals(titulo)) {
+							catalogo.remove(i).gettitulo().equals(titulo);
+							System.out.println("El libro se ha borrado correctamente. \n");
+						}else {
+							System.out.println("El libro no se ha podido borrar. \n");
+						}
 					}
 					break;
 	
@@ -106,15 +110,4 @@ public class biblioteca {
 		varint.close();
 		varopcion.close();
 	}
-
-//	private static boolean borrado(String titulo) {
-//		boolean c = false;
-//		
-//		for(int i = 0; i < catalogo.size(); i++) {
-//			catalogo.remove(i).gettitulo().equals(titulo);
-//			System.out.println("El libro se ha borrado correctamente.");
-//		}
-//
-//		return c;
-//	}
 }
