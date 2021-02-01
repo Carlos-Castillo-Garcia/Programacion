@@ -34,6 +34,7 @@ public class biblioteca {
 			System.out.println("[2] Consultar el listado de libros");
 			System.out.println("[3] Dar de baja un libro");
 			System.out.println("[4] Hacer un el prestamo de un libro");
+			System.out.println("[5] Hacer una devolucion");
 			System.out.println("[0] Salir del programa");
 			opcion = varopcion.nextInt();
 			System.out.println("");
@@ -59,8 +60,10 @@ public class biblioteca {
 	
 				case 2:
 					System.out.println("Has seleccionado la opcion de ver los libro que hay.\n\n");
-					System.out.println("Estos son los libro que hay introducidos: ");
+					System.out.println("Introduzca el libro que quieres buscar: ");
+					titulo = varstring.nextLine();
 					for(int i = 0, contador = 1; i < catalogo.size(); i++, contador++) {
+						if(catalogo.get(i).gettitulo().equals(titulo)) {
 						System.out.println("Libro "+contador+": \n "
 								+"Titulo: "
 								+ catalogo.get(i).gettitulo()+".\n "
@@ -69,6 +72,7 @@ public class biblioteca {
 								+"Tiene "+ catalogo.get(i).getejemplares()+" ejemplares.\n "
 								+"De los cuales "
 								+ catalogo.get(i).getprestados()+" estan prestados.\n");
+						}
 					}
 					break;
 				case 3:
@@ -84,7 +88,6 @@ public class biblioteca {
 						}
 					}
 					break;
-	
 				case 4:
 					System.out.println("Has seleccionado la opcion de hacer un prestamo.");
 					System.out.println("Introduzca el titulo del libro que quiere prestar: ");
@@ -96,6 +99,23 @@ public class biblioteca {
 								System.out.println("El libro ha sido prestado\n");
 							}else {
 								System.out.println("El libro no ha sido prestado\n");
+							}
+						}else {
+							System.out.println("Este libro no existe en nuestra biblioteca\n");
+						}
+					}
+					break;
+				case 5:
+					System.out.println("Has seleccionado la opcion de devolver un libro:");
+					System.out.println("Introduzca el nombre del libro a devolver:");
+					titulo = varstring.nextLine();
+					for(int i = 0; i < catalogo.size(); i++) {
+						if(catalogo.get(i).gettitulo().equals(titulo)) {
+							if (catalogo.get(i).getejemplares() > catalogo.get(i).getprestados()){
+								catalogo.get(i).setprestado(catalogo.get(i).getprestados()-1);
+								System.out.println("El libro ha sido devuelto\n");
+							}else {
+								System.out.println("El libro no ha sido devuelto\n");
 							}
 						}else {
 							System.out.println("Este libro no existe en nuestra biblioteca\n");
