@@ -8,27 +8,36 @@ class EstadisticaTest {
 
 	@Test
 	void testMedia() {
-		fail("Not yet implemented");
+		float prueba[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+		
+		float resultado = Estadistica.media(prueba);
+		assertEquals(resultado, 5.5);
 	}
 
 	@Test
 	void testModa() {
-		fail("Not yet implemented");
+		float prueba[] = {2, 4, 6, 8, 9, 2, 2, 1, 4, 5};
+		
+		float resultado = Estadistica.moda(prueba);
+		assertEquals(resultado, 2);
 	}
 
 	@Test
 	void testVariacionSR() {
-		fail("Not yet implemented");
+		long resultado = Estadistica.variacionSR(3, 5);
+		assertEquals(resultado, 60);
 	}
 
 	@Test
 	void testVariacion() {
-		fail("Not yet implemented");
+		double resultado = Estadistica.variacion(5, 6);
+		assertEquals(resultado, 7776);
 	}
 
 	@Test
 	void testPermutaciones() {
-		fail("Not yet implemented");
+		long resultado = Estadistica.permutaciones(7);
+		assertEquals(resultado, 5040);
 	}
 
 }

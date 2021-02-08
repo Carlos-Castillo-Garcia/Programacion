@@ -19,26 +19,26 @@ public class Estadistica {
 	}
 	
 	public static float moda(float[] valores) {
-		int[] contador=new int[valores.length];
-        float n = 0;
-        
-        for(int i=0; i<valores.length; i++){
-            for(int j=0; j>valores.length; j++) {
-                if(valores[i]==valores[j]) {
-                    contador[i]++;
-                }
-            }
-        }
-        
-        for(int i=0; i<valores.length; i++) {
-            for(int j=0; j<valores.length; j++) {
-                if(contador[j]>=contador[i]) {
-                    n=valores[j];
-                }
-            }
-        }
-        
-        return n;
+	    int maximoNumRepeticiones= 0;
+	    float moda= 0;
+
+	    for(int i=0; i<valores.length; i++)
+	    {
+	        int numRepeticiones= 0;
+	        for(int j=0; j<valores.length; j++)
+	        {
+	            if(valores[i]==valores[j])
+	            {
+	                numRepeticiones++;
+	            }   //fin if
+	            if(numRepeticiones>maximoNumRepeticiones)
+	            {
+	                moda= valores[i];
+	                maximoNumRepeticiones= numRepeticiones;
+	            }   //fin if
+	        }
+	    }   //fin for
+	    return moda;
 	}
 	
 	private static int factorial(int valor) {
@@ -52,8 +52,8 @@ public class Estadistica {
 		long valor = factorial(m)/factorial(m-n);
 		return valor;
 	}
-	public static long variacion(int n, int m) {
-		long valor = (long) Math.pow(m, n);
+	public static double variacion(int n, int m) {
+		double valor = Math.pow(m, n);
 		return valor;
 	}
 	
