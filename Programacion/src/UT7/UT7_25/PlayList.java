@@ -20,6 +20,12 @@ public class PlayList {
 		canciones = new ArrayList<Cancion>();
 	}
 	
+	public String getnombre() {
+		return nombre;
+	}
+	public void setnombre(String nombre) {
+		this.nombre = nombre;
+	}
 	public void anyadirCancion(String titulo, String autor, int duracion) {
 		canciones.add(new Cancion (titulo, autor, duracion));
 	}
@@ -46,9 +52,8 @@ public class PlayList {
 		canciones.clear();
 	}
 	public boolean eliminarCancion(int posicion) {
-		
 		if(canciones.size()>0) {
-			if(posicion <= canciones.size()) {
+			if(posicion <= canciones.size() && posicion >= 0) {
 				canciones.remove(posicion);
 				return true;
 			}else {
@@ -59,10 +64,23 @@ public class PlayList {
 		}
 	}
 	public Cancion encontrarCancionPorTitulo(String nombre) {
-		
-		
+		int posi = 0;
+		for(int i = 0; i<canciones.size(); i++) {
+			if(canciones.get(i).gettitulo().equals(nombre)) {
+				posi = i;
+			}
+		}
+		return canciones.get(posi);
 	}
 	public ArrayList <Cancion> encontrarCancionesPorArtista(String artista){
-		
+		ArrayList<Cancion> artistas = new ArrayList<Cancion>();
+
+        for(int i=0; i < canciones.size(); i++) {
+            if(canciones.get(i).getartista().equals(artista)) {
+                artistas.add(new Cancion (canciones.get(i).gettitulo(), canciones.get(i).getartista(), canciones.get(i).getduracion()));
+            }
+        }
+
+        return artistas;
 	}
 }

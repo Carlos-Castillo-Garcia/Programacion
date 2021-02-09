@@ -42,7 +42,6 @@ public class Cancion {
 	public String toString() {
 		return gettitulo() + "-" + getartista() + getduracion();
 	}
-	
 	public String reproduciendo() {
 		return "Reproduciendo. " + toString();
 	}
