@@ -1,7 +1,7 @@
 /**
  * 
  */
-package UT7;
+package UT7.UT7_Esatadistica;
 
 /**
  * @author Manuel

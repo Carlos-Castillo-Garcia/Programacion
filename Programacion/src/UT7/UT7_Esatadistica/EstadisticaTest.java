@@ -1,4 +1,4 @@
-package UT7;
+package UT7.UT7_Esatadistica;
 
 import static org.junit.jupiter.api.Assertions.*;
 
