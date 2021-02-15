@@ -24,4 +24,13 @@ public class Carrito {
 			confirmado = PENDIENTE;
 		}
 		
+		private float caculaTotal() {
+			float acumulado = 0;
+			
+			for(ArticuloCarrito ac: this.pedido) {
+				acumulado = ac.elemento.getPrecio()*ac.cantidad;
+			}
+			
+			return acumulado;
+		}
 }

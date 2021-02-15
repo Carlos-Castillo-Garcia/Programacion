@@ -23,6 +23,7 @@ public class Articulo {
 			setNombre(nombre);
 			setPrecio(precio);
 			setStock(stock);
+			
 		}
 
 		public String getCodigo() {

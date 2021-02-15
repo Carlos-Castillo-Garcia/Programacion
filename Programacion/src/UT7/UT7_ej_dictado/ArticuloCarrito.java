@@ -23,5 +23,6 @@ public class ArticuloCarrito {
 		@Override
 		public String toString() {
 			return this.elemento + "x" + this.cantidad + "\n";
+			
 		}
 }
