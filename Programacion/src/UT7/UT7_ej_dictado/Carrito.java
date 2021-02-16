@@ -24,7 +24,7 @@ public class Carrito {
 			confirmado = PENDIENTE;
 		}
 		
-		private float caculaTotal() {
+		private float calculaTotal() {
 			float acumulado = 0;
 			
 			for(ArticuloCarrito ac: this.pedido) {
@@ -33,4 +33,30 @@ public class Carrito {
 			
 			return acumulado;
 		}
+		
+		public void addArticulo(Articulo articulo, int cantidad) {
+			boolean found = false;
+			
+			for(ArticuloCarrito ac : pedido) {
+				if(ac.elemento.equals(articulo)) {
+					ac.cantidad += cantidad;
+					found = true;
+				}
+			}
+			if(!found) {
+				ArticuloCarrito nuevo = new ArticuloCarrito(articulo, cantidad);
+				pedido.add(nuevo);
+			}
+			this.total = calculaTotal();
+		}
 }
+
+
+
+
+
+
+
+
+
+

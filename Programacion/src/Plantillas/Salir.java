@@ -27,7 +27,7 @@ public class Salir {
 //####################################################################################
 		
 //SALIR###############################################################################
-		System.out.println("Â¿Desea salir del programa? ( 0 = No ; 1 = Si )");  //#####
+		System.out.println("¿Desea salir del programa? ( 0 = No ; 1 = Si )");  //#####
 		salir = entrada.nextInt();                                             //#####
 																			   //#####
 		if(salir == 1) {                                                       //#####
