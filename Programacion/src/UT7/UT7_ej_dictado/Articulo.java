@@ -76,7 +76,11 @@ public class Articulo {
 		}
 		
 		public boolean disponible(int cantidad) {
-			return cantidad < stock;
+			return cantidad <= stock;
+		}
+		
+		public void ajustarstock(int cantidad) {
+			this.stock += cantidad;
 		}
 		
 }

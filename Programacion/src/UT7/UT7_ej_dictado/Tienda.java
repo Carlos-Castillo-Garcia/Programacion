@@ -23,12 +23,10 @@ public class Tienda {
 		Scanner scopcion = new Scanner(System.in);
 		
 		int opcion = 0;
-		Carrito carro;
+		Carrito carro = new Carrito();
 		ArrayList <Articulo> catalogo = new ArrayList <Articulo>();
 		inicializarcatalogo(catalogo);
-		
-		
-		
+
 		do {
 			System.out.println("Esto es el menu de la tienda, tiene diferentes opciones:");
 			System.out.println("1. Añadir un articulo al catalogo");
@@ -44,21 +42,30 @@ public class Tienda {
 					break;
 				case 2:
 					System.out.println("Has elegido la opcion de comprar productos, para seleccionar los productos es necesario utilizar"
-							+ " el codigo del producto");
-
-
+							+ " el codigo del producto\n");
+					comprar(catalogo, carro, scstring, scint);
 					break;
 				case 3:
-					System.out.println("Has elegido la opcion de confirmas la compra de productos.");
+					System.out.println("Has elegido la opcion de confirmas la compra de productos.\n");
+					System.out.println(carro.mostarcarrito());
+					System.out.println("¿Desea confirmar el carrito? (si)(no)");
+					String sctemp = scstring.nextLine();
+					if(sctemp.equals("si")) {
+						System.out.println(carro.confirmacion());
+						modifstock(catalogo, carro);
+						mostrarCatalogo(catalogo);
+					}else{
+						System.out.println("Si desea seguir comprando marque la opcion 2.\n");
+					}
 					break;
-				case 0:
+				case 4:
 					System.out.println("Muchas gracias por utilizar esta tienda.");
 					break;
 				default:
 					System.out.println("Has introducido la opcion incorrecta, vuelva a introducirla.");
 					break;
 			}
-		}while(opcion == 0);
+		}while(opcion != 4);
 		scstring.close();
 		scint.close();
 		scopcion.close();
@@ -86,22 +93,81 @@ public class Tienda {
 			System.out.println(a);
 		}
 	}
-//	private static void aumentarCodigoArticulo() {
-//		
-//	}
 	private static void comprar(ArrayList<Articulo> c, Carrito ca, Scanner sctexto,Scanner scint){
-		int opsalida = 0;
+		String opsalida = " ";
+		Articulo insertar = new Articulo(); 
+		mostrarCatalogo(c);
+		int m = 0;
 		do {
 			System.out.println("Introduzca el codigo del producto:");
-			String temp = sctexto.nextLine();
-			for(int i = 0; i<c.size(); i++) {
-				
+			String tempcodigo = sctexto.nextLine();
+			insertar = buscarporcodigo(c, tempcodigo);
+			if(insertar != null) {
+				do {
+				System.out.println("Introduzca la cantidad del producto que desea comprar: ");
+				int tempcantidad = scint.nextInt();
+				if(insertar.disponible(tempcantidad)) {
+					System.out.println("\nEl articulo se a introducido al carrito.");
+					ca.addArticulo(insertar, tempcantidad);
+					m = 1;
+				}else {
+					System.out.println("No hay tantas existencias, porfavor pida una cantidad distinta.");
+				}
+				}while(m != 1);
+			}else {
+				System.out.println("El producto no esta en la lista.");
 			}
-		opsalida = Metodosalir.salir(scint);
-		
-		}while(opsalida == 0);
-	}
+			System.out.println("\n¿Desea salir de comprar y confirmar el pago del carrito?(si)(no)");
+			opsalida = Metodosalir.salir(sctexto);
+		}while(opsalida.equals("no"));
 
+	}
+//	private static void aumentarCodigoArticulo() {
+//	
+//}
+	private static void modifstock(ArrayList<Articulo> c, Carrito carro) {
+		int pos;
+		for(ArticuloCarrito ac: carro.pedido) {
+			pos = buscarporcodigomod(c, ac.elemento.getCodigo());
+			if(pos >- 1){
+				c.get(pos).ajustarstock(-1 * ac.cantidad);
+			}
+		}
+	}
+	private static int buscarporcodigomod(ArrayList <Articulo> catalog, String codigo) {
+		boolean encontrado = false;
+		int largo = catalog.size();
+		int i = 0;
+
+		while(i<largo && !(encontrado)){
+			if(catalog.get(i).getCodigo().equals(codigo)){
+				encontrado = true;
+			}else {
+				i++;
+			}
+		}
+		if(encontrado) {
+			return i;
+		}else {
+			return -1;
+		}
+	}
+	private static Articulo buscarporcodigo(ArrayList <Articulo> catalog, String codigo) {
+		boolean encontrado = false;
+		int largo = catalog.size();
+		int i = 0;
+		Articulo a = null;
+		while(i<largo && !(encontrado)){
+			if(catalog.get(i).getCodigo().equals(codigo)){
+				encontrado = true;
+				a = catalog.get(i);
+			}else {
+				i++;
+			}
+		}
+		return a; 
+		
+	}
 }
 
 

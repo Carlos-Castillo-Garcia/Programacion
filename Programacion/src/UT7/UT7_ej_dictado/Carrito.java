@@ -13,7 +13,7 @@ public class Carrito {
 
 		ArrayList <ArticuloCarrito> pedido;
 		float total;
-		boolean confirmado;
+		boolean estado;
 		
 		public static boolean CONFIRMADO = true;
 		public static boolean PENDIENTE = false;
@@ -21,9 +21,8 @@ public class Carrito {
 		public Carrito() {
 			pedido = new ArrayList <ArticuloCarrito>();	
 			total = 0;
-			confirmado = PENDIENTE;
+			estado = PENDIENTE;
 		}
-		
 		private float calculaTotal() {
 			float acumulado = 0;
 			
@@ -33,7 +32,6 @@ public class Carrito {
 			
 			return acumulado;
 		}
-		
 		public void addArticulo(Articulo articulo, int cantidad) {
 			boolean found = false;
 			
@@ -48,6 +46,27 @@ public class Carrito {
 				pedido.add(nuevo);
 			}
 			this.total = calculaTotal();
+		}
+		public String mostarcarrito() {
+			StringBuilder cs = new StringBuilder();
+			
+			cs.append("############Articulos del carrito#############\n");
+			for(ArticuloCarrito ac: pedido) {
+				cs.append(ac);
+			}
+			cs.append("El precio total es: ").append(this.calculaTotal());
+			if(estado) {
+				cs.append("\nEl carrito esta confirmado.\n");
+			}else {
+				cs.append("\nEl carrito esta sin confirmar.\n");
+			}
+			
+			cs.append("#####################FIN###################");
+			return cs.toString();
+		}
+		public String confirmacion() {
+			estado = CONFIRMADO;
+			return "El carrito ha sido confirmado.\n";
 		}
 }
 

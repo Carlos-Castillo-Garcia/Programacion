@@ -10,11 +10,11 @@ import java.util.Scanner;
  */
 public class Metodosalir {
 	
-	public static int salir(Scanner entrada) {
-		int salir = 0;
-		System.out.println("¿Desea salir del programa? ( 0 = No ; 1 = Si )");  
-		salir = entrada.nextInt();                                          
-		if(salir == 1) {                                                     
+	public static String salir(Scanner entrada) {
+		String salir = " ";
+//		System.out.println("¿Desea salir del programa? ( 0 = No ; 1 = Si )");  
+		salir = entrada.nextLine();                                          
+		if(salir == "si") {                                                     
 			System.out.println("Hasta luego");                           
 		}else {                                                               
 			System.out.println("");               							
